@@ -4,7 +4,7 @@ function sketchProc(processing) {
     processing.setup = function() {
 	processing.size(800, 600);
 	processing.text("Hello, World!", 10, 10);
-    }
+    };
 
     // override draw function, by default it will be called 60 times per second
     processing.draw = function() {
