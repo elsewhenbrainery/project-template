@@ -30,7 +30,7 @@ var sketchProc = function(processing) {
     };
 }
 
-var canvas = document.getElementById("project-canvas");
 
-// attaching the sketchProc function to the canvas
+// boilerplate code --you probably want to ignore this
+var canvas = document.getElementById("project-canvas");
 var p = new Processing(canvas, sketchProc);
