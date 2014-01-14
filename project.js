@@ -2,7 +2,7 @@ var sketchProc = function(processing) {
 	
     var exampleFunction = function() {
 	processing.rect(30, 20, 55, 55);
-    }
+    };
 
     // this code is executed once when the program is started
     processing.setup = function() {
