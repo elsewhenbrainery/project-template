@@ -5,6 +5,14 @@ var exampleVar = 100;
 
 // put functions here, just like kahn academy
 var exampleFunction = function() {
+    
+    // change color depending on key pressed
+    if (keyIsPressed && keyCode === SPACE) {
+        fill(255, 0, 0);
+    } else {
+        fill(0, 0, 255);
+    }
+
     rect(300, 200, 55, 55);
 };
 
@@ -28,6 +36,9 @@ var draw = function() {
     // draw some text
     textSize(50);
     text("Hello, World!", exampleVar, exampleVar);
+
+    textSize(20);
+    text("Press the space bar...", 500, 500);
 
     // call a function (defined up above)
     exampleFunction();
