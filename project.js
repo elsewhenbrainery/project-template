@@ -1,36 +1,35 @@
-var sketchProc = function(processing) {
-	
-    // put variables here, just like kahn academy
-    var exampleVar = 10;
+title('My Project');
 
-    // put functions here, just like kahn academy
-    var exampleFunction = function() {
-	processing.rect(30, 20, 55, 55);
-    };
+// put variables here, just like kahn academy
+var exampleVar = 100;
 
-    // this code is executed once when the program is started
-    processing.setup = function() {
+// put functions here, just like kahn academy
+var exampleFunction = function() {
+    rect(300, 200, 55, 55);
+};
 
-	// set up the size of the canvas (you probably don't want to change this!)
-	processing.size(800, 600);
+// this code is executed once when the program is started
+var setup = function() {
 
-	// some drawing commands; feel free to change these
-	processing.fill(255, 0, 0);
+    // set up the size of the canvas (you probably don't want to change this!)
+    size(800, 600);
 
-	// draw some text
-	processing.text("Hello, World!", exampleVar, exampleVar);
+};
 
-	// call a function (defined up above)
-	exampleFunction();
-    };
+// override draw function, by default it will be called 60 times per second
+var draw = function() {
 
-    // override draw function, by default it will be called 60 times per second
-    processing.draw = function() {
+    // clear the screen
+    background(255, 255, 255);
 
-    };
-}
+    // some drawing commands; feel free to change these
+    fill(255, 0, 0);
 
+    // draw some text
+    textSize(50);
+    text("Hello, World!", exampleVar, exampleVar);
 
-// boilerplate code --you probably want to ignore this
-var canvas = document.getElementById("project-canvas");
-var p = new Processing(canvas, sketchProc);
+    // call a function (defined up above)
+    exampleFunction();
+
+};
